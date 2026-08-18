@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CLASSIFIED: LAUREL</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: white;
+        text-align: center;
+    }
+
+    .page {
+        min-height: 100vh;
+        padding: 40px 20px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .warning {
+        color: #ff4444;
+        font-size: 18px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 42px;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        max-width: 650px;
+        line-height: 1.7;
+        color: #ddd;
+    }
+
+    .stamp {
+        border: 4px solid #ff4444;
+        color: #ff4444;
+        padding: 12px 25px;
+        font-size: 24px;
+        font-weight: bold;
+        transform: rotate(-5deg);
+        margin: 25px;
+    }
+
+    button {
+        background: white;
+        color: black;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    .file {
+        width: 100%;
+        max-width: 600px;
+        background: #1c1c1c;
+        border: 1px solid #444;
+        border-radius: 15px;
+        padding: 25px;
+        text-align: left;
+    }
+
+    .file p {
+        margin: 12px 0;
+    }
+
+    .photo-grid {
+        width: 100%;
+        max-width: 700px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .photo {
+        height: 180px;
+        background: #292929;
+        border: 2px dashed #777;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        overflow: hidden;
+    }
+
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .big {
+        font-size: 60px;
+        margin: 10px;
+    }
+
+    .birthday {
+        font-size: 45px;
+        margin: 10px;
+    }
+
+    .secret {
+        color: #aaa;
+        font-size: 13px;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 32px;
+        }
+
+        .photo-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<section class="page active" id="page1">
+
+    <div class="warning">
+        ⚠ CLASSIFIED INFORMATION ⚠
+    </div>
+
+    <h1>THE LAUREL FILE</h1>
+
+    <div class="stamp">
+        TOP SECRET
+    </div>
+
+    <p>
+        You have somehow gained access to a highly confidential
+        birthday investigation.
+    </p>
+
+    <p>
+        This file contains information about one particular human
+        who has successfully survived <b>23 years</b>.
+    </p>
+
+    <button onclick="nextPage()">
+        ACCESS FILE →
+    </button>
+
+</section>
+
+
+<!-- PAGE 2 -->
+
+<section class="page" id="page2">
+
+    <div class="warning">
+        SUBJECT IDENTIFIED
+    </div>
+
+    <h1>LAUREL</h1>
+
+    <div class="file">
+
+        <p><b>Age:</b> 23</p>
+
+        <p><b>Status:</b> Still functioning</p>
+
+        <p><b>Threat Level:</b> 😂 Extremely questionable</p>
+
+        <p><b>Known For:</b> Being Laurel</p>
+
+        <p><b>Special Ability:</b> Making ordinary moments memorable</p>
+
+        <p><b>Current Mission:</b> Survive another year</p>
+
+    </div>
+
+    <button onclick="nextPage()">
+        CONTINUE INVESTIGATION →
+    </button>
+
+</section>
+
+
+<!-- PAGE 3 -->
+
+<section class="page" id="page3">
+
+    <h2>📸 EVIDENCE ARCHIVE</h2>
+
+    <p>
+        The following photographic evidence has been recovered
+        from the Laurel archives.
+    </p>
+
+    <div class="photo-grid">
+
+        <div class="photo">
+            PHOTO 01
+        </div>
+
+        <div class="photo">
+            PHOTO 02
+        </div>
+
+        <div class="photo">
+            PHOTO 03
+        </div>
+
+        <div class="photo">
+            PHOTO 04
+        </div>
+
+    </div>
+
+    <button onclick="nextPage()">
+        VIEW FINAL REPORT →
+    </button>
+
+</section>
+
+
+<!-- PAGE 4 -->
+
+<section class="page" id="page4">
+
+    <div class="big">
+        🏆
+    </div>
+
+    <h2>OFFICIAL AWARDS</h2>
+
+    <div class="file">
+
+        <p>🏆 <b>Best Person Award</b></p>
+
+        <p>😂 <b>Most Likely To Cause Chaos</b></p>
+
+        <p>🧠 <b>Professional Overthinker Award</b></p>
+
+        <p>🎭 <b>Best Main Character Energy</b></p>
+
+        <p>🔥 <b>Somehow Still Surviving Award</b></p>
+
+    </div>
+
+    <button onclick="nextPage()">
+        ONE LAST THING →
+    </button>
+
+</section>
+
+
+<!-- PAGE 5 -->
+
+<section class="page" id="page5">
+
+    <div class="birthday">
+        🎂
+    </div>
+
+    <h1>HAPPY 23rd BIRTHDAY!</h1>
+
+    <h2>LAUREL ❤️</h2>
+
+    <p>
+        Another year has been successfully completed.
+        Another chapter begins.
+    </p>
+
+    <p>
+        Keep laughing, keep making memories,
+        keep being yourself, and don't become
+        too responsible just yet. 😂
+    </p>
+
+    <p>
+        Here's to more adventures, more ridiculous moments,
+        and many more memories together.
+    </p>
+
+    <h2>🎉 HAPPY BIRTHDAY! 🎉</h2>
+
+    <button onclick="reveal()">
+        🔐 FINAL SECRET
+    </button>
+
+</section>
+
+
+<!-- FINAL SECRET -->
+
+<section class="page" id="secret">
+
+    <div class="big">
+        👀
+    </div>
+
+    <h1>YOU FOUND IT.</h1>
+
+    <p>
+        After an extensive investigation,
+        we have reached the following conclusion:
+    </p>
+
+    <h2>
+        Laurel is officially 23.
+    </h2>
+
+    <p>
+        And unfortunately for everyone...
+        there's no return policy. 😂
+    </p>
+
+    <div class="stamp">
+        CASE CLOSED
+    </div>
+
+    <p class="secret">
+        This classified birthday file was created specially for Laurel.
+    </p>
+
+</section>
+
+
+<script>
+
+let currentPage = 1;
+
+function nextPage() {
+
+    document.getElementById("page" + currentPage)
+        .classList.remove("active");
+
+    currentPage++;
+
+    document.getElementById("page" + currentPage)
+        .classList.add("active");
+}
+
+function reveal() {
+
+    document.getElementById("page5")
+        .classList.remove("active");
+
+    document.getElementById("secret")
+        .classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
